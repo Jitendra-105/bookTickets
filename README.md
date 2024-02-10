@@ -18,7 +18,8 @@ Number
 User details are stored in local storage upon successful submission.
 
 --> Technologies Used
-HTML
-CSS
-JavaScript
+Redux
 Reactjs
+JavaScript
+Tailwindcss
+HTML
