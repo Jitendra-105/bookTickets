@@ -18,7 +18,7 @@ Number
 User details are stored in local storage upon successful submission.
 
 --> Technologies Used
-Redux
+Redux tolkit
 Reactjs
 JavaScript
 Tailwindcss
