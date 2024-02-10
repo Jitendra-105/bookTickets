@@ -8,10 +8,8 @@ const Summary = () => {
   const { id } = useParams();
   const parseData = useSelector((state) => state.summary.parseData);
  
-  // Find the movie details based on the ID
   const showDetails = parseData.find((show) => show?.show?.id.toString() === id);
 
-  // Check if showDetails is available or if parseData is still empty
   if (!showDetails || !showDetails.show || parseData.length === 0) {
     return (
       <div>
@@ -32,7 +30,6 @@ const Summary = () => {
         )}
         <h1 className='font-bold'>{showDetails.show.name}</h1>
         <p className='bg-slate-800 text-white p-3 rounded-sm md:w-[100%]'>{showDetails.show.summary}</p>
-        {/* Display other details as needed */}
         <Link to={`/bookingform/${showDetails.show.id}`} >
         <button className='bg-orange-500 text-white py-1 px-3 rounded-md my-3'>Book Tickets</button>
         </Link>

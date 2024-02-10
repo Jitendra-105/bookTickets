@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './index.css';
-import ShowsList from './components/showsList.jsx';
-import Summary from './components/summary.jsx';
+import ShowsList from './components/ShowsList.jsx';
+import Summary from './components/Summary.jsx';
 import App from './App.jsx';
 import { Provider } from 'react-redux'
 import {store} from './app/store'

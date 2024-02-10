@@ -23,16 +23,13 @@ const BookingForm = () => {
 
   const showKey = `show_${showDetails.show.id}`;
 
-
   const bookTickets = (e) => {
     e.preventDefault();
 
-    // Store user details
     localStorage.setItem(`${showKey}_name`, input.username);
     localStorage.setItem(`${showKey}_email`, input.email);
     localStorage.setItem(`${showKey}_number`, input.number);
   
-    // Store movie details
     localStorage.setItem(`${showKey}_movieName`, showDetails.show.name);
     localStorage.setItem(`${showKey}_showTiming`, showDetails.show.schedule.time);
   
@@ -40,12 +37,10 @@ const BookingForm = () => {
   };
 
   useEffect(() => {
-    // Retrieve stored details from local storage
     const storedUsername = localStorage.getItem('username');
     const storedEmail = localStorage.getItem('email');
     const storedNumber = localStorage.getItem('number');
 
-    // Set the retrieved details to the state
     setInput({
       username: storedUsername || '',
       email: storedEmail || '',
